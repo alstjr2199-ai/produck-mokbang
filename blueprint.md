@@ -5,22 +5,25 @@ A web application featuring fun interactions and "Mokbang" (eating show) related
 
 ## Current Features & Design
 - **Title:** "이서연바보" (Lee Seoyeon Babo)
-- **Interactive Elements:** A "<개추>" button.
+- **Interactive Elements:** 
+  - A "<개추>" button with a 1/5 failure chance.
+  - A Dark/Light mode toggle button.
 - **Visuals:** Displays a hamster image upon clicking the button.
-- **Aesthetics:** Clean layout with modern CSS features (centering, shadows, responsive design).
+- **Aesthetics:** 
+  - Clean layout with modern CSS features.
+  - Responsive design.
+  - **Theme Support:** Supports both Light and Dark modes.
+  - **Constraints:** Images are strictly contained within their wrappers to prevent overflow.
 
 ## Implementation Plan (Current Change)
 1. **HTML:** 
-   - Update `<title>` and `<h1>` to "이서연바보".
-   - Add a button with the text "<개추>".
-   - Add a container (`#image-container`) for the hamster image.
+   - Add a theme toggle button in the top-right corner.
 2. **CSS:**
-   - Apply a modern look with centering, nice typography, and button effects.
-   - Use CSS variables for colors.
-   - Add a "glow" effect to the button as per `GEMINI.md` guidelines.
+   - Define variables for Dark Mode (`--bg-color`, `--text-color`, `--container-bg`).
+   - Implement transition effects for smooth theme switching.
+   - Ensure `image-wrapper` has strict `max-width` and `overflow: hidden`.
 3. **JavaScript:**
-   - Add an event listener to the button.
-   - Implement a 1/5 (20%) probability for a failure message ("햄스터 생성 실패!").
-   - If successful, inject a random hamster image into the container.
+   - Add theme toggle logic to switch a class on the `body` element.
+   - Save theme preference to `localStorage`.
 4. **Git:**
-   - Commit and push changes to the repository.
+   - Commit and push changes to the repository for automatic deployment via GitHub Pages.
