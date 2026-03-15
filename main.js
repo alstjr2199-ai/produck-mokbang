@@ -13,6 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
   showHamsterBtn.addEventListener('click', async () => {
     // Show container and loading state
     imageContainer.classList.add('visible');
+    
+    // 1/5 probability of failure
+    if (Math.random() < 0.2) {
+      imageContainer.innerHTML = '<p class="error-text">햄스터 생성 실패! 🐹🚫</p>';
+      return;
+    }
+
     imageContainer.innerHTML = '<p>햄스터 소환 중...</p>';
 
     try {

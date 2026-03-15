@@ -20,6 +20,7 @@ A web application featuring fun interactions and "Mokbang" (eating show) related
    - Add a "glow" effect to the button as per `GEMINI.md` guidelines.
 3. **JavaScript:**
    - Add an event listener to the button.
-   - Inject a hamster image from a reliable source (e.g., Unsplash or a random hamster API) into the container.
+   - Implement a 1/5 (20%) probability for a failure message ("햄스터 생성 실패!").
+   - If successful, inject a random hamster image into the container.
 4. **Git:**
    - Commit and push changes to the repository.
